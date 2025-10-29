@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>welcome</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        #message2 {
+            color: black;
+            margin-top: 50px;
+
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h3 id="message"></h3>
+        <h4 id="message2">Hallo!</h4>
+        <button id="snake">SNAKE</button>
+        <button id="bird">BIRD</button>
+        <button id="logoutBtn">Logout</button>
+    </div>
+
+
+
+    <script>
+        const message = document.getElementById("message");
+        const snakeBtn = document.getElementById("snake");
+        const birdBtn = document.getElementById("bird");
+        const logoutBtn = document.getElementById("logoutBtn");
+
+        const user = localStorage.getItem("loggedUser");
+            
+        if(user){
+            message.textContent = `Hello,  ${user} ! how are you ?`;
+            message2.textContent = `Please chose a game, ${user} !`;
+        } else {
+            window.location.href = "login.html";
+        };
+
+        logoutBtn.addEventListener("click",() => {
+            localStorage.removeItem("loggedUser");
+            window.location.href = "login.html"
+        });
+
+
+        snakeBtn.addEventListener("click",() => {
+            window.location.href = "snake.html";
+        });
+
+
+        birdBtn.addEventListener("click",() => {
+            window.location.href = "bird.html";
+        });
+
+    </script>
+  
+
+</body>
+</html>

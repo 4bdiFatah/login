@@ -1,0 +1,159 @@
+/* Grundlayout */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f0f2f5;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* Container */
+.container {
+    width: 360px;
+    background: linear-gradient(135deg, #12c2e9, #c471ed, #f64f59);
+    border-radius: 25px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    padding: 50px 30px;
+    text-align: center;
+}
+
+/* Benutzer-Icon */
+.img img {
+    display: block;
+    margin: 0 auto 25px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: white;
+    padding: 10px;
+}
+
+/* Überschrift */
+.container h1 {
+    color: black;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+/* Eingabefelder */
+.input-field {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.input-field input {
+    width: 80%;
+    height: 45px;
+    border-radius: 50px;
+    border: none;
+    font-size: 1em;
+    padding: 0 15px;
+    outline: none;
+}
+
+.input-field input::placeholder {
+    color: #888;
+}
+
+/* Button */
+button {
+    margin-top: 20px;
+    width: 150px;
+    height: 45px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #FEAC5E, #C779D0, #4BC0C8);
+    font-size: 1em;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* Text unter dem Formular */
+p {
+    margin-top: 25px;
+    color: #222;
+    font-size: 1em;
+}
+
+p a {
+    color: yellow;
+    font-weight: 100;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+p a:hover {
+    text-decoration: underline  black;
+}
+
+/* Responsives Design */
+@media (max-width: 400px) {
+    .container {
+        width: 90%;
+        padding: 40px 20px;
+    }
+
+    .input-field input {
+        width: 90%;
+    }
+
+    button {
+        width: 130px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+#birdCanvas {
+    background: url(img/flappybirdbg.png);
+
+}
+
+
+.containeer h1{
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.containeer hr{
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translate(-50%);
+    border: 5px solid red;
+    width: 500px;
+    height: 800px;
+}
+
+
+
+
+#player {
+    position: absolute;
+    top: -0px;
+    left: 50%;
+    background-color: black;
+    color: white;
+    font-size: 1em;
+    transform: translate( -50%);
+}

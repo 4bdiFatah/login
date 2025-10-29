@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bird</title>
+    <script src="games.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="containeer">
+        <hr>
+        <h1>Flappy-Bird</h1>
+        <canvas id="birdCanvas"></canvas>
+        <p id="player">Player: </p>
+    </div>
+
+    <script>
+        const player = document.getElementById("player");
+        const user = localStorage.getItem("loggedUser");
+
+        if(user){
+            player.textContent = `CurrentPlayer = ${user}`;
+        } else {
+            window.location.href = "login.html"
+        };
+    </script>
+</body>
+</html>

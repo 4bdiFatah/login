@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>snake</title>
+    <script src="snake.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <div class="containeeer">
+        <h1>SNAKE</h1>
+        <canvas id="board"></canvas>
+        <p id="player">Player: </p>
+    </div>
+
+        <script>
+        const player = document.getElementById("player");
+        const user = localStorage.getItem("loggedUser");
+
+        if(user){
+            player.textContent = `CurrentPlayer = ${user}`;
+        } else {
+            window.location.href = "login.html"
+        };
+    </script>
+</body>
+</html>
